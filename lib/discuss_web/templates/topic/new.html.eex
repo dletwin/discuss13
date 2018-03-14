@@ -1,0 +1,5 @@
+<h4>Create a New Topic</h4>
+
+<%= render "form.html", Map.put(assigns, :action, topic_path(@conn, :create)) %>
+
+<span><%= link "Cancel", to: topic_path(@conn, :index) %></span>

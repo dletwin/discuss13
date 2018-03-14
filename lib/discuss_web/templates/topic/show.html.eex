@@ -1,0 +1,18 @@
+<%= @topic.title %>
+
+<div class="input-field">
+  <textarea class="materialize-textarea"></textarea>
+  <button class="btn">Add Comment</button>
+  <ul class="collection">
+
+  </ul>
+</div>
+
+<span><%= link "Edit", to: topic_path(@conn, :edit, @topic) %></span>
+<span><%= link "Back", to: topic_path(@conn, :index) %></span>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    window.createSocket(<%= @topic.id %>)
+  });
+</script>
